@@ -12,7 +12,7 @@ export const Menu = () => {
         <div className="header-info-list-page">
         </div>
         <a href=".initial" style={{color: "#ef2a75", fontSize:"large"}}>About us</a>
-        <h1>The Best Shop</h1>
+        <h1>Cachibache Bazaar</h1>
         <button className="main-button cart-button" onClick={toggleCartVisibility}>
           <CartIcon />
           {totalItems > 0 && <span className="cart-count">{totalItems}</span>}

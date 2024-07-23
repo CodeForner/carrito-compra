@@ -41,9 +41,9 @@ function App() {
       setCategories(['all', ...categorySet]);
     }
 
-    if (currentPage === 'products') {
-      getProducts();
-    }
+    
+    getProducts();
+    
   }, [currentPage]);
 
   // Filter products based on filters state whenever products or filters change
