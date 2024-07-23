@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { cartContext } from "./cartContext"; // Correct import path if needed
+import { cartContext } from "../context/cartContext"; // Correct import path if needed
 
 export const Cart = () => {
     const { cart, addCart, cleanCart, removeFromCart, decreaseQuantity, toggleCartVisibility } = useContext(cartContext);

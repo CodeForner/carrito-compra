@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header.jsx';
-import { useCart } from './hooks/useCart.jsx';
+import { useCart } from '../hooks/useCart.jsx';
 import { AddToCartIcon } from './Icons.jsx';
 import { Cart } from './Cart.jsx';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AddToCartIcon, CartIcon } from './Icons';
-import { useCart } from './hooks/useCart';
+import { useCart } from '../hooks/useCart';
 import { Menu } from './menu';
 
 function Header({ categories, onChangeFilters }) {

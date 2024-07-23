@@ -1,4 +1,4 @@
-import { useCart } from "./hooks/useCart";
+import { useCart } from "../hooks/useCart";
 import { CartIcon } from "./Icons";
 import "./App.css";
 import "./Header.css";
@@ -10,7 +10,7 @@ export const Menu = () => {
     <>
       <header className="header-list-page">
         <div className="header-info-list-page">
-        </div>
+        </div>  
         <a href=".initial" style={{color: "#ef2a75", fontSize:"large"}}>About us</a>
         <h1>Cachibache Bazaar</h1>
         <button className="main-button cart-button" onClick={toggleCartVisibility}>

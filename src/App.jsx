@@ -2,10 +2,9 @@ import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import './Header.css';
 import './index.css';
-import ProductsList from './ProductsList.jsx';
-import Initial from './Initial.jsx';
-import { useCart } from './hooks/useCart.jsx';
-import { Cart } from './Cart.jsx';
+import ProductsList from './components/ProductsList.jsx';
+import Initial from './components/Initial.jsx';
+
 async function fetchData() {
   try {
     const data = await fetch("https://fakestoreapi.com/products?limit=15");
@@ -21,7 +20,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const {  isCartVisible, toggleCartVisibility } = useCart();
+
   const [filters, setFilters] = useState({
     minPrice: 0,
     category: 'all',
