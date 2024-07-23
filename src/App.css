@@ -117,7 +117,7 @@ body, html {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  background: #09f;
+  background: white;
   padding: 16px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -126,6 +126,7 @@ body, html {
 
 .product-list li:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .product-list img {
@@ -145,6 +146,7 @@ body, html {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 8px;
+  color: black;
 }
 
 .product-list strong {

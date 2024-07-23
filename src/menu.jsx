@@ -11,7 +11,7 @@ export const Menu = () => {
       <header className="header-list-page">
         <div className="header-info-list-page">
         </div>
-        <a href=".initial" style={{color: "#ef2a75"}}>About us</a>
+        <a href=".initial" style={{color: "#ef2a75", fontSize:"large"}}>About us</a>
         <h1>The Best Shop</h1>
         <button className="main-button cart-button" onClick={toggleCartVisibility}>
           <CartIcon />

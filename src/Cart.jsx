@@ -25,15 +25,15 @@ export const Cart = () => {
                             </div>
                             <strong>{item.price} $</strong>
                             <div >
-                            <strong>Total: {(item.price *item.quantity).toFixed(2)}</strong>
+                            <strong >Total: {(item.price *item.quantity).toFixed(2)}</strong>
                                 <div style={{display:"flex" , justifyContent:"center", alignItems:"center", gap: "5px"}}>
                                 <button style={{padding:"5px", background: "#ef2a75"}}onClick={() => decreaseQuantity(item)}>-</button>
-                                <p> {item.quantity}</p>
+                                <p style={{color:"black", fontSize:"medium"}}> {item.quantity}</p>
                                 <button style={{padding:"5px", background: "#ef2a75"}} onClick={() => addCart(item)}>+</button>
                                 </div>
                                 
                             </div>
-                            <button onClick={() => removeFromCart(item)}>Eliminate</button>
+                            <button style={{color:"white", background:"#f32c2c", padding:"5px"}}onClick={() => removeFromCart(item)}>Eliminate</button>
                             
                         </li>
                     </ul>

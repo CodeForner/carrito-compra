@@ -30,7 +30,8 @@ function Header({ categories, onChangeFilters }) {
   return (
     <>
       <Menu></Menu>
-      <aside className='header-filters'>
+      
+     { !isCartVisible && <aside className='header-filters'>
         <div className='header-price'>
           <label>Price from: </label>
           <input 
@@ -49,7 +50,7 @@ function Header({ categories, onChangeFilters }) {
             ))}
           </select>
         </div>
-      </aside>
+      </aside>}
     </>
   );
 }
