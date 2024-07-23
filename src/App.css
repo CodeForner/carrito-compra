@@ -1,4 +1,3 @@
-/* Remove default margin and padding from all elements */
 
 * {
   margin: 0;
@@ -8,13 +7,13 @@
   
 }
 
-/* Ensure the body takes up the full height of the viewport */
 body, html {
   margin: 0;
 }
 
-/* General app styling with background image */
+
 .app {
+  /*Important property in order to fully cover the viewport*/
   min-height: 100vh;
   max-width: 900px;
  margin: auto;
@@ -24,30 +23,26 @@ body, html {
 
 }
 
-/* Initial page styles */
+/*Important property for setting correctly the background image without distortion*/
 .initial {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center;     /* Center content vertically */
+  justify-content: center; 
+  align-items: center;    
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* Products page styles */
-
-
-/* Start page specific styles */
 .start-page {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
-  text-align: center; /* Center text for better appearance */
+  text-align: center; 
  margin-top: -250px;
 }
 
-/* Flexbox for header alignment */
+
 .start-page-header {
   display: flex;
   flex-direction: column;
@@ -82,10 +77,6 @@ body, html {
 
 /* Product list page styles */
 
-/* Center the page content */
-
-
-
 .list-page {
   display: flex;
   justify-content: center;
@@ -106,7 +97,7 @@ body, html {
   font-size: small;
 }
 
-/* Styling for each product item */
+/*Styling for each product item */
 .product-list ul {
   list-style: none;
   padding: 0;
@@ -172,7 +163,7 @@ body, html {
 
 
 
-/* Media query for smaller screens */
+/*Media query for smaller screens */
 @media (max-width: 600px) {
   .product-list {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

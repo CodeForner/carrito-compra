@@ -36,7 +36,7 @@ export function CartProvider({ children }) {
             if (productInCartIndex >= 0) {
                 const item = prevState[productInCartIndex];
                 if (item.quantity > 1) {
-                    // Decrease quantity but keep item in cart
+                    //Decrease quantity but keep item in cart
                     const newCart = prevState.map((item, index) =>
                         index === productInCartIndex
                             ? { ...item, quantity: item.quantity - 1 }
@@ -44,7 +44,7 @@ export function CartProvider({ children }) {
                     );
                     return newCart;
                 } else {
-                    // Remove item if quantity is 1 or less
+                    //Remove item if quantity is 1 or less
                     return prevState.filter((item, index) => index !== productInCartIndex);
                 }
             }
@@ -56,11 +56,10 @@ export function CartProvider({ children }) {
         setCart([]);
     };
 
-    //Esta funcion lo que hace es usar filter
-    //Este metodo nos permite tratar un array para luego devolver solo los elementos que cumplan una condicion
-    //en este caso devuelve todos los elementos que sean distintos al producto, por lo que de cierta forma
-    // lo estamos eliminando del carrito, ya que estamos definiendo el carrito como todos los elementos que había
-    //menos el product.
+    
+    //Filter nos permite tratar un array para luego devolver solo los elementos que cumplan una condicion
+    //en este caso devuelve todos los elementos del carrito que sean distintos a product, por lo que de cierta forma
+    // lo estamos eliminando del carrito
     const removeFromCart =(product)=>{
         setCart(prevState =>prevState.filter((item)=> item.id!=product.id))
     }

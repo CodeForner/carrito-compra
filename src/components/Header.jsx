@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AddToCartIcon, CartIcon } from './Icons';
 import { useCart } from '../hooks/useCart';
 import { Menu } from './menu';
 
@@ -7,7 +6,7 @@ function Header({ categories, onChangeFilters }) {
   const [minPrice, setMinPrice] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const { cart, addCart, removeFromCart, isCartVisible, toggleCartVisibility } = useCart();
+  const { isCartVisible } = useCart();
 
   const handlePriceChange = (e) => {
     const value = e.target.value;

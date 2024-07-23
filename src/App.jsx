@@ -26,7 +26,7 @@ function App() {
     category: 'all',
   });
 
-  // Fetch products and categories when currentPage changes to 'products'
+  //Fetch products and categories when currentPage changes to 'products'
   useEffect(() => {
     async function getProducts() {
       const productData = await fetchData();
@@ -45,7 +45,7 @@ function App() {
     
   }, [currentPage]);
 
-  // Filter products based on filters state whenever products or filters change
+  //Filter products based on filters state whenever products or filters change
   useEffect(() => {
     const filterProducts = () => {
       const filtered = products.filter((product) => {
@@ -64,12 +64,12 @@ function App() {
 
 
 
-  // Handle page click to navigate to products page
+  //Handle page click to navigate to products page
   const handleClickPage = () => {
     setCurrentPage('products');
   };
 
- // Determine the background style based on the current page
+ //Determine the background style based on the current page
  const backgroundStyle = currentPage === 'products'
  ? {
      background: 'radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)',

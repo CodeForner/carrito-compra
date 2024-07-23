@@ -6,8 +6,8 @@ import { AddToCartIcon } from './Icons.jsx';
 import { Cart } from './Cart.jsx';
 
 function ProductsList({ products, categories, onChangeFilters }) {
-  const { cart, addCart, removeFromCart, isCartVisible, cleanCart } = useCart(); // Importing cart
-  const [productCartStatus, setProductCartStatus] = useState({}); // Tracking which products are in the cart
+  const { cart, addCart, removeFromCart, isCartVisible, cleanCart } = useCart(); 
+  const [productCartStatus, setProductCartStatus] = useState({}); 
 
   const handleAddCart = (product) => {
     addCart(product);
@@ -25,7 +25,7 @@ function ProductsList({ products, categories, onChangeFilters }) {
     }));
   };
 
-  // Function to clear cart and reset product cart status
+  //Function to clear cart and reset product cart status
   const handleClearCart = () => {
     cleanCart();
     setProductCartStatus({});
