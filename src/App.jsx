@@ -70,25 +70,32 @@ function App() {
     setCurrentPage('products');
   };
 
-  // Determine the background image URL based on the current page
-  const backgroundImage = currentPage === 'products'
-    ? 'url("https://st2.depositphotos.com/3954803/7056/i/450/depositphotos_70567447-stock-photo-blue-grunge-background.jpg")'
-    : 'url("../pexels-pixabay-531880.jpg")';
+ // Determine the background style based on the current page
+ const backgroundStyle = currentPage === 'products'
+ ? {
+     background: 'radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%)',
+     backgroundSize: 'cover',
+     backgroundRepeat: 'no-repeat',
+     backgroundPosition: 'center',
+   }
+ : {
+     backgroundImage: 'url("https://img.freepik.com/free-photo/shopping-cart-black-background-with-copy-space_23-2148317906.jpg")',
+     backgroundSize: 'cover',
+     backgroundRepeat: 'no-repeat',
+     backgroundPosition: 'center',
+   };
 
-  return (
-  
-    <div className='container'>
-      <div
-        className={`app ${currentPage}`}
-        style={{ backgroundImage }}
-      >
-        {currentPage === 'initial' && <Initial handleClickPage={handleClickPage} />}
-        {currentPage === 'products' && <ProductsList products={filteredProducts} categories={categories} onChangeFilters={setFilters}/>}
-       
-      </div>
-    </div>
-   
-  );
+return (
+ <div className='container' style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+   <div
+     className={`app ${currentPage}`}
+     style={backgroundStyle}
+   >
+     {currentPage === 'initial' && <Initial handleClickPage={handleClickPage} />}
+     {currentPage === 'products' && <ProductsList products={filteredProducts} categories={categories} onChangeFilters={setFilters}/>}
+   </div>
+ </div>
+);
 }
 
 export default App;

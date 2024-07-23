@@ -50,7 +50,6 @@
 
 .cart-button:hover {
     cursor: pointer;
-    background-color: rgb(59, 192, 59);
   }
   
 .cart-button-pressed {

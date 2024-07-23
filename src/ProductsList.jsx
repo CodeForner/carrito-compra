@@ -40,7 +40,7 @@ function ProductsList({ products, categories, onChangeFilters }) {
   }, [cart]);
 
   return (
-    <>
+    <div className='product-page'>
       <Header categories={categories} onChangeFilters={onChangeFilters} />
       {isCartVisible ? (
         <Cart onClearCart={handleClearCart} />
@@ -73,7 +73,7 @@ function ProductsList({ products, categories, onChangeFilters }) {
           </section>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

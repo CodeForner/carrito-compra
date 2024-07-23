@@ -26,10 +26,10 @@ export const Cart = () => {
                             <strong>{item.price} $</strong>
                             <div >
                             <strong>Total: {(item.price *item.quantity).toFixed(2)}</strong>
-                                <div style={{display:"flex" , justifyContent:"space-between"}}>
-                                <button onClick={() => decreaseQuantity(item)}>-</button>
+                                <div style={{display:"flex" , justifyContent:"center", alignItems:"center", gap: "5px"}}>
+                                <button style={{padding:"5px", background: "#ef2a75"}}onClick={() => decreaseQuantity(item)}>-</button>
                                 <p> {item.quantity}</p>
-                                <button onClick={() => addCart(item)}>+</button>
+                                <button style={{padding:"5px", background: "#ef2a75"}} onClick={() => addCart(item)}>+</button>
                                 </div>
                                 
                             </div>

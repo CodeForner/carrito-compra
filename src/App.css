@@ -10,7 +10,6 @@
 
 /* Ensure the body takes up the full height of the viewport */
 body, html {
-
   margin: 0;
 }
 
@@ -21,6 +20,7 @@ body, html {
  margin: auto;
   padding: 2rem;
   text-align: center;
+  
 
 }
 
@@ -30,6 +30,9 @@ body, html {
   justify-content: center; /* Center content horizontally */
   align-items: center;     /* Center content vertically */
   height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Products page styles */
@@ -41,6 +44,7 @@ body, html {
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   text-align: center; /* Center text for better appearance */
+ margin-top: -250px;
 }
 
 /* Flexbox for header alignment */
@@ -53,7 +57,7 @@ body, html {
 }
 
 .start-page-header button {
-  background-color: rgb(69, 240, 69);
+  background-color: #ee2f7d;
   padding: 5px 10px;
   border: 1px solid grey;
   border-radius: 10px;
@@ -62,17 +66,26 @@ body, html {
 
 .start-page-header button:hover {
   cursor: pointer;
-  background-color: rgb(59, 192, 59);
+  background-color: #ef2a75;
 }
 
-/* Padding for paragraphs */
 .start-page p {
-  padding: 20px;
+  font-size: 1em;
+  line-height: 1.6em;
+  max-width: 800px;
+  margin: 10px 0;
+  font-weight: bolder;
+}
+.start-page p strong {
+  color: #ee2f7d;
 }
 
 /* Product list page styles */
 
 /* Center the page content */
+
+
+
 .list-page {
   display: flex;
   justify-content: center;
@@ -143,7 +156,6 @@ body, html {
 
 .cart-button,
 .cart-button-pressed {
-  background: #007bff;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -156,10 +168,7 @@ body, html {
   background: #d9534f;
 }
 
-.cart-button:hover,
-.cart-button-pressed:hover {
-  background: #0056b3;
-}
+
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {

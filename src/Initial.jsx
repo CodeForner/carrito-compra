@@ -1,20 +1,16 @@
-
-
-function Initial ({handleClickPage}){
-    return(
-        (
-            <section className="start-page">
-              <div className="start-page-header">
-                <h1>Welcome to Paradise!</h1>
-                <h2>With love.</h2>
-                <button onClick={handleClickPage}>Get started!</button>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis iure, cumque repellendus totam aliquid sunt, modi amet excepturi rem voluptatem eaque iusto architecto libero vitae in culpa? Voluptate ducimus eos dignissimos quibusdam molestiae ut minima culpa hic pariatur quis. Cumque modi minus blanditiis sequi asperiores, in illo ad vero delectus.
-              </p>
-            </section>
-          )
-    )
+function Initial({ handleClickPage }) {
+  return (
+    <section className="start-page">
+      <div className="start-page-header">
+        <h1>Welcome to Tranquil Bazaar!</h1>
+        <h2>Where Shopping Meets Serenity.</h2>
+        <button onClick={handleClickPage}>Get started!</button>
+      </div>
+      <p>
+        Tranquil Bazaar is your go-to destination for a serene shopping experience. We offer a curated selection of quality, <strong>affordable</strong> products, supporting local artisans and <strong>eco-friendly</strong> practices. Shop with us and enjoy a seamless, tranquil journey.
+      </p>
+    </section>
+  );
 }
 
 export default Initial;
